@@ -63,7 +63,7 @@ const pacientSchema = mongoose.Schema({
         required: true
     },
 
-    jafezterapia: {
+    jaconseguiuatendimento: {
         type: Boolean,
         required: true
     },
