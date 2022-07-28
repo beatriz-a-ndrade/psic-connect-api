@@ -1,0 +1,37 @@
+{
+  "name": "psic-connect-api",
+  "version": "1.0.0",
+  "description": "Projeto final para o curso de back end da {Reprograma}. Trata-se de uma API que permite conectar psicólogos (voluntários) com pacientes ( em situação de vulnerabilidade social) e tornar o acompanhamento psicológico mais acessível à comunidade.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "swagger-autogen": "node swagger.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beatriz-a-ndrade/psic-connect-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beatriz-a-ndrade/psic-connect-api/issues"
+  },
+  "homepage": "https://github.com/beatriz-a-ndrade/psic-connect-api#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "dotenv-safe": "^8.2.0",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.4",
+    "save": "^2.5.0",
+    "swagger-autogen": "^2.21.5",
+    "swagger-ui-express": "^4.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
