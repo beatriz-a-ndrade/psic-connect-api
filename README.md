@@ -3,11 +3,40 @@
     <p align="center">Projeto Final {Reprograma}<p>
 </h1>
 <p align="center">
-<img src="public/imagens/capaProjeto.jpg" width="350" height="300"/>
+<img src="public/imagens/logoProjeto.jpg" width="350" height="300"/>
 </p>
 <br>
 
-## 💻 Sobre o projeto 
+
+<br>
+<br>
+
+<!--ts-->
+
+- [💻 Sobre o Projeto](#-sobre-o-projeto)
+- [🚀 Descrição da API Psic.connect](#-descrição-da-api-psicconnect)
+- [🔗 Apresentação do Projeto](#-apresentação-do-projeto)
+- [⚙️ Funcionalidades/Objetivos](#️-funcionalidadesobjetivos)
+- [📚 Aprendizados](#-aprendizados)
+- [🛠️ Tecnologias utilizadas](#️-tecnologias-utilizadas)
+- [🛠️ Pacotes Utilizados](#️-pacotes-utilizados)
+- [💻 Instalação](#-instalação)
+- [📁 Arquitetura MVC](#-arquitetura-mvc)
+- [🔃 Rotas](#-rotas)
+- [🔃 Retorna a documentação no swagger:](#-retorna-a-documentação-no-swagger)
+- [🔃 Retorna teste com apresentação:](#-retorna-teste-com-apresentação)
+- [🔃 Manipulação das Rotas de Cadastro e Login dos usuários *Pacient* ou *Volunteer*](#-manipulação-das-rotas-de-cadastro-e-login-dos-usuários-pacient-ou-volunteer)
+- [🔃 Manipulação das Rotas para o login do usuário **Pacient** :](#-manipulação-das-rotas-para-o-login-do-usuário-pacient-)
+- [🔃 Manipulação das Rotas para o login do usuário **Volunteer** :](#-manipulação-das-rotas-para-o-login-do-usuário-volunteer-)
+
+
+<!--te-->
+
+<br>
+<br>
+
+
+## 💻 Sobre o Projeto 
 
 <br>
 
@@ -34,9 +63,9 @@
   
 <br>
 
-## 🔗 Link 
+## 🔗 Apresentação do Projeto
 
-- [Apresentação](https://www.canva.com/design/DAFHpespaR0/ZSXNrzcxHuYte34kj9X0rw/edit)
+- [Psic.connect](https://www.canva.com/design/DAFHpespaR0/ZSXNrzcxHuYte34kj9X0rw/edit)
 
 <br>
 
@@ -74,7 +103,13 @@ Para a construção do projeto, as seguintes tecnologias foram utilizadas:
 - [Vscode](https://code.visualstudio.com/)
 - [heroku](https://dashboard.heroku.com/apps)  
 
-### Pacotes Utilizados 
+<br>
+
+## 🛠️ Pacotes Utilizados 
+
+<br>
+
+Para o desenvolvimento da API, as seguintes bibliotecas foram necessárias:
 
 - [Express](https://expressjs.com/pt-br/)
 - [Nodemon](https://nodemon.io/)
@@ -84,6 +119,147 @@ Para a construção do projeto, as seguintes tecnologias foram utilizadas:
 - [JWT](https://www.npmjs.com/package/jsonwebtoken)
 - [Bcrypt](https://www.npmjs.com/package/bcrypt)
 - [swagger-ui-express](https://www.npmjs.com/package/swagger-ui-express)
+- [Eslint](https://www.npmjs.com/package/eslint)
+- [Jest](https://www.npmjs.com/package/jest)
+
+<br>
+
+## 💻 Instalação
+
+<br>
+
+```bash
+# Clonar o repositório
+$ git clone https://github.com/beatriz-a-ndrade/psic-connect-api
+
+# Entrar na pasta do repositório
+$ cd psic-connect-api
+
+# Instalar as dependências
+$ npm install
+
+# Executar o servidor
+$ npm start
+
+```
+</br>
+
+##  📁 Arquitetura MVC
+
+</br>
+
+```
+ 📁PSIC-CONNECT-API
+   |
+   |--📁public\imagens
+   |   |- 📄 logoProjeto.jpg
+   |
+   |--📁node_modules
+   |
+   |--📁 src
+   |  ||
+   |  ||--📁 controller
+   |  |    |- 📄 pacientController.js
+   |  |    |- 📄 volunteerController.js   
+   |  |    |- 📄 autenticacao.js
+   |  |    
+   |  ||--📁 database
+   |  |    |- 📄 mongooseConnect.js
+   |  |
+   |  ||--📁 models
+   |  |    |- 📄 pacientModel.js
+   |  |    |- 📄 volunteerModel.js
+   |  |
+   |  ||--📁 routes
+   |  |    |- 📄 index.js
+   |  |    |- 📄 pacientRoutes.js
+   |  |    |- 📄 volunteerRoutes.js
+   |  |
+   |  ||-📄 app.js
+   |  |
+   |  |--📁 swagger
+   |  |   |- 📄 swagger_output.json
+   |  |
+   |  |--📁 test
+   |  |   |- 📄 pacient.test.js
+   |  |   |- 📄 volunteer.test.js
+   |  |
+   |- 📄 .env
+   |- 📄 .env.example
+   |- 📄 .eslintrc.json
+   |- 📄 .gitignore
+   |- 📄 package-lock.json
+   |- 📄 package.json
+   |- 📄 Procfile
+   |- 📄 README.md
+   |- 📄 server.js
+   |- 📄 swagger.js
+
+```
+</br>
+
+## 🔃 Rotas
+
+* local: http://localhost:8080
+
+* Heroku: https://xxxxxxx.herokuapp.com/
+
+    * Utilize o [Postman](https://www.postman.com/) ou [Insomnia](https://insomnia.rest/download/) para para chamar e testar os endpoints da API localmente ou via Heroku
+
+<br>
+
+## 🔃 Retorna a documentação no swagger: 
+    
+Swagger - Heroku: 
+
+| Método HTTP  | Endpoint                            | Descrição                            |
+| ------------ | ----------------------------------- | ------------------------------------ |
+| GET          | `http://localhost:8080/rota-doc-psicconnect-api`    |  documentação  swagger               |        
+
+<br>
+
+## 🔃 Retorna teste com apresentação: 
+
+| Método HTTP  | Endpoint                     | Descrição                            |
+| ------------ | ---------------------------- | ------------------------------------ |
+| GET          | `http://localhost:8080/`     |  Mensagem de apresentação (Index)    |             |
+
+<br>
+
+
+## 🔃 Manipulação das Rotas de Cadastro e Login dos usuários *Pacient* ou *Volunteer*
+
+| Método HTTP  | Endpoint                | Descrição                            |
+| ------------ | ----------------------- | ------------------------------------ |
+| POST          | `/pacient/create`                | Cadastra novo usuário Pacient            |
+| POST          | `/pacient/login`        | Realiza o login Pacient com email e senha               |
+| POST         | `/volunteer/create`         | Cria/cadastra um novo usuário Volunteer        |
+| POST          | `/volunteer/login`     | Realiza o login Volunteer com CRP e senha     |
+
+<br>
+
+## 🔃 Manipulação das Rotas para o login do usuário **Pacient** :
+
+| Método HTTP  | Endpoint                | Descrição                            |
+| ------------ | ----------------------- | ------------------------------------ |
+| GET          | `/volunteer/list`                | Retorna lista de todos profissionais da psicologia cadastrados no banco de dados             |
+| GET          | `/volunteer/list/on`                | Retorna todos psicólogos voluntários cadastrados que estão disponíveis para atendimento           |
+| GET          | `/volunteer/find/:id`                | Retorna todos dados de cadastro de um voluntário em específico            |
+| PATCH         | `/pacient/update/:id`        | Atualiza/modifica dados específicos do cadastro Pacient              |
+| DELETE       | `/pacient/delete/:id`     | Deleta um usuário Pacient do sistema         |
+
+<br>
+
+
+## 🔃 Manipulação das Rotas para o login do usuário **Volunteer** :
+
+| Método HTTP  | Endpoint                | Descrição                            |
+| ------------ | ----------------------- | ------------------------------------ |
+| GET          | `/pacient/list`                | Retorna lista de todos cadastrados como usuário pacient no banco de dados      |
+| GET          | `/pacient/list/on`                | Retorna lista de todos pacientes que ainda não conseguiram iniciar o acompanhamento com algum psicólogo cadastrado no sistema             |
+| GET         | `/pacient/triage/:id`        | Retorna informações pessoais e sensíveis dos pacientes que possam contribuir em um processo de triagem por parte do Psicólogo *( Rota segura )*              |
+| PATCH         | `/volunteer/update/:id`        | Atualiza/modifica dados específicos do cadastro Volunteer
+| DELETE       | `/volunteer/delete/:id`     | Deleta um usuário Volunteer do sistema         |
 
 <br>
 

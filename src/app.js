@@ -28,7 +28,7 @@ app.use(cors())
 app.use("/", index);
 app.use("/pacient", pacient);
 app.use("/volunteer", volunteer);
-app.use('/rota-documentacao-psicconnect-api', swaggerUi.serve, swaggerUi.setup(swaggerFile));
+app.use('/rota-doc-psicconnect-api', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 
 
