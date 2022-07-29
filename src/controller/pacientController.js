@@ -84,6 +84,31 @@ const getListPacients = async (req, res) => {
     }
 }
 
+// Preciso implementar auth para só acessar fazendo login com senha
+const getListPacientsNoAtend = async (req, res) => {
+    try {
+        const listPacients = await PacientUser.find({
+            jaconseguiuatendimento: false
+        }, {
+            "nome": 1,
+            "email": 1,
+            "estadocidade": 1,
+            "disponibilidade": 1,
+            "idade": 1,
+            "idgenero":1,
+            "etnia":1
+        })
+        res.status(200).json({
+            message: "Lista de pacientes cadastrados aguardando atendimento",
+            listPacients
+        })
+    } catch (error) {
+        res.status(500).json({
+            message: error.message
+        })
+    }
+}
+
 
 // autenticação de rota falta - getTriageInfo
 const getTriageInfoId = (req, res) => {
@@ -158,6 +183,7 @@ module.exports = {
     createUserPacient,
     pacientLogin,
     getListPacients,
+    getListPacientsNoAtend,
     getTriageInfoId,
     updateUserPacient,
     deletePacient

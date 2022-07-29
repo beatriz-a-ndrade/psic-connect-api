@@ -36,8 +36,8 @@ const volunteerSchema = mongoose.Schema({
           default: "Não Informado."
       },
 
-    CRP: {
-        type: Number,
+    crp: {
+        type: "String",      // Implementar autenticação para só ser possivel aceitar um CRP que esteja ativo
         required: true,
         unique: true
     },

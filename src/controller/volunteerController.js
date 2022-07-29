@@ -36,7 +36,7 @@ const createUserVolunteer = (req, res) => {
 
 const volunteerLogin = (req, res) => {
     VolunteerUser.findOne({
-        email: req.body.email
+        crp: req.body.crp
     }, function (error, volunteer) {
         if (error) {
             return res.status(500).send({
@@ -44,7 +44,7 @@ const volunteerLogin = (req, res) => {
             })
         }
         if (!volunteer) {
-            return res.status(404).send("Não existe usuário com este email!")
+            return res.status(404).send("Usuário não encontrado!")
         }
 
         const senhaValida = bcrypt.compareSync(req.body.senha, volunteer.senha)
@@ -83,10 +83,13 @@ const getVolunteersDisp = async (req, res) => {
             disponivel: true
         }, {
             "nome": 1,
+            "idade": 1,
             "CRP": 1,
             "email": 1,
             "disponibilidade": 1,
-            "experienciaclinica": 1
+            "experienciaclinica": 1,
+            "idgenero":1,
+            "etnia":1
         })
         res.status(200).json({
             message: "Lista de psicologos voluntários cadastrados disponíveis : ",
