@@ -100,7 +100,7 @@
 
 ## 🔗 Apresentação do Projeto
 
-- [Psic.connect - Slides](https://www.canva.com/design/DAFHpespaR0/ZSXNrzcxHuYte34kj9X0rw/edit)
+- [Psic.connect - Slides](https://www.canva.com/design/DAFHpespaR0/lHrVIFHOsp7FmrHn2TMFLQ/view?utm_content=DAFHpespaR0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
 
 <br>
 
