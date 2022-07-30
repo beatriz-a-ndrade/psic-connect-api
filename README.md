@@ -9,19 +9,14 @@
 
 
 <br>
-<br>
-<p align="center">
 
-### :blueheart: Aplicação disponível [aqui](https://psic-connet-api.herokuapp.com/)
-
-<br>
-<p>
 
 
 <!--ts-->
 
 - [💻 Sobre o Projeto](#-sobre-o-projeto)
 - [🚀 Descrição API - Psic.connect](#-descrição-api---psicconnect)
+- [🔗 Aplicação disponível](#-aplicação-disponível)
 - [🔗 Apresentação do Projeto](#-apresentação-do-projeto)
 - [⚙️ Funcionalidades/Objetivos](#️-funcionalidadesobjetivos)
 - [📚 Aprendizados](#-aprendizados)
@@ -30,19 +25,19 @@
 - [💻 Instalação](#-instalação)
 - [📁 Arquitetura MVC](#-arquitetura-mvc)
 - [🔃 Rotas](#-rotas)
-  - [🔃 Retorna a documentação no swagger :](#-retorna-a-documentação-no-swagger-)
-  - [Swagger - Heroku :](#swagger---heroku-)
-  - [🔃 Retorna teste com apresentação:](#-retorna-teste-com-apresentação)
+  - [🔃 Retorna a documentação no swagger](#-retorna-a-documentação-no-swagger)
+  - [Swagger - Heroku](#swagger---heroku)
+  - [🔃 Retorna teste com apresentação](#-retorna-teste-com-apresentação)
   - [🔃 Manipulação das Rotas de Cadastro e Login dos usuários *Pacient* e *Volunteer*](#-manipulação-das-rotas-de-cadastro-e-login-dos-usuários-pacient-e-volunteer)
-  - [🔃 Manipulação das Rotas para o Login do usuário **Pacient** :](#-manipulação-das-rotas-para-o-login-do-usuário-pacient-)
-  - [🔃 Manipulação das Rotas para o login do usuário **Volunteer** :](#-manipulação-das-rotas-para-o-login-do-usuário-volunteer-)
+  - [🔃 Manipulação das Rotas para o Login do usuário **Pacient**](#-manipulação-das-rotas-para-o-login-do-usuário-pacient)
+  - [🔃 Manipulação das Rotas para o login do usuário **Volunteer**](#-manipulação-das-rotas-para-o-login-do-usuário-volunteer)
 - [✅ Schema Pacients](#-schema-pacients)
 - [✅ API deve retornar seguinte JSON:](#-api-deve-retornar-seguinte-json)
 - [✅ SchemaVolunteer](#-schemavolunteer)
 - [✅ API deve retornar seguinte JSON:](#-api-deve-retornar-seguinte-json-1)
-- [✅  **[ POST ] :**  Login para geração de Token](#---post----login-para-geração-de-token)
-  - [Login Pacient](#login-pacient)
-  - [Login Volunteer](#login-volunteer)
+- [🔃  **[ POST ] :**  Login para geração de Token](#---post----login-para-geração-de-token)
+  - [🔃 Login Pacient](#-login-pacient)
+  - [🔃 Login Volunteer](#-login-volunteer)
 - [🚧 Implementações futuras (Em andamento)](#-implementações-futuras-em-andamento)
 - [🛠️ Contribua para o nosso projeto!](#️-contribua-para-o-nosso-projeto)
 - [👨‍💻 Autora](#-autora)
@@ -79,11 +74,21 @@
 
 
   
+
 <br>
+<p>
+
+## 🔗 Aplicação disponível
+
+- [Psic.connect - Heroku](https://psic-connet-api.herokuapp.com/)
+
+<br>
+
+<p>
 
 ## 🔗 Apresentação do Projeto
 
-- [Psic.connect](https://www.canva.com/design/DAFHpespaR0/ZSXNrzcxHuYte34kj9X0rw/edit)
+- [Psic.connect - Slides](https://www.canva.com/design/DAFHpespaR0/ZSXNrzcxHuYte34kj9X0rw/edit)
 
 <br>
 
@@ -226,9 +231,9 @@ $ npm start
 
 <br>
 
-### 🔃 Retorna a documentação no swagger : 
+### 🔃 Retorna a documentação no swagger  
     
-### Swagger - Heroku : 
+### Swagger - Heroku  
 
 | Método HTTP  | Endpoint                            | Descrição                            |
 | ------------ | ----------------------------------- | ------------------------------------ |
@@ -236,7 +241,7 @@ $ npm start
 
 <br>
 
-### 🔃 Retorna teste com apresentação: 
+### 🔃 Retorna teste com apresentação 
 
 | Método HTTP  | Endpoint                     | Descrição                            |
 | ------------ | ---------------------------- | ------------------------------------ |
@@ -257,7 +262,7 @@ $ npm start
 
 <br>
 
-### 🔃 Manipulação das Rotas para o Login do usuário **Pacient** :
+### 🔃 Manipulação das Rotas para o Login do usuário **Pacient** 
 
 | Método HTTP  | Endpoint                | Descrição                            |
 | ------------ | ----------------------- | ------------------------------------ |
@@ -270,7 +275,7 @@ $ npm start
 <br>
 
 
-### 🔃 Manipulação das Rotas para o login do usuário **Volunteer** :
+### 🔃 Manipulação das Rotas para o login do usuário **Volunteer** 
 
 <br>
 
@@ -381,8 +386,10 @@ $ npm start
 
  <br>
 
- ## ✅  **[ POST ] :**  Login para geração de Token
-### Login Pacient
+ ## 🔃  **[ POST ] :**  Login para geração de Token
+ <br>
+
+### 🔃 Login Pacient
  ```jsx
 {
     "email": "arrobateste@reprograma.com",
@@ -390,7 +397,7 @@ $ npm start
 }
  ```
 
-### Login Volunteer
+### 🔃 Login Volunteer
  ```jsx
 {
     "crp": "XXXX.XX-XX",
