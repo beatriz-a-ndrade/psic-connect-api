@@ -17,6 +17,7 @@
 - [💻 Sobre o Projeto](#-sobre-o-projeto)
 - [🚀 Descrição API - Psic.connect](#-descrição-api---psicconnect)
 - [🔗 Aplicação disponível](#-aplicação-disponível)
+- [🔗 Documentação disponível](#-documentação-disponível)
 - [🔗 Apresentação do Projeto](#-apresentação-do-projeto)
 - [⚙️ Funcionalidades/Objetivos](#️-funcionalidadesobjetivos)
 - [📚 Aprendizados](#-aprendizados)
@@ -81,6 +82,17 @@
 ## 🔗 Aplicação disponível
 
 - [Psic.connect - Heroku](https://psic-connet-api.herokuapp.com/)
+
+<br>
+
+<p>
+
+<br>
+<p>
+
+## 🔗 Documentação disponível
+
+- [Psic.connect - Documentação ](https://psic-connet-api.herokuapp.com/rota-document/)
 
 <br>
 
