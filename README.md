@@ -304,22 +304,6 @@ $ npm start
 
 ## ✅ Schema Pacients 
 
-- id: gerado automaticamente 
-- nome: String e obrigatório
-- email: String, obrigatório e único
-- disponibilidade: texto e obrigatório 
-- idade: número e obrigatório
-- estadocidade: String e obrigatório
-- idgenero: String e opcional 
-- etnia: String e opcional 
-- rendamedia: Number e obrigatório 
-- contato: Number, obrigatório e único
-- motivacao: String e obrigatório  
-- jaconseguiuatendimento: Boolean e obrigatório
-- tempoespera: Number e opcional
-- ocupacao: String e obrigatório
-- senha: String e obrigatório
-
 <br>
 
 ## ✅ API deve retornar seguinte JSON:
