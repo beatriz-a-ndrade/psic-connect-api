@@ -99,6 +99,20 @@
         }
       }
     },
+    "/pacient/list/on": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/pacient/triage/{id}": {
       "get": {
         "description": "",
@@ -214,10 +228,13 @@
             "schema": {
               "type": "object",
               "properties": {
-                "email": {
+                "crp": {
                   "example": "any"
                 },
                 "senha": {
+                  "example": "any"
+                },
+                "email": {
                   "example": "any"
                 }
               }

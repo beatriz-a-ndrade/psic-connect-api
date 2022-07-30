@@ -1,8 +1,3 @@
-/* routes/function:
-- POST: /pacient/create - > createUserPacient
-- POST: /pacient/login - > pacientLogin
-
-*/
 const PacientUser = require('../models/pacientModel')
 const volunteerUser = require('../models/volunteerModel')
 const bcrypt = require('bcrypt')
@@ -64,8 +59,6 @@ const pacientLogin = (req, res) => {
 
 
 
-
-// Resta implementar auth com login de Volunteer
 const getListPacients = async (req, res) => {
     try {
         const listPacients = await PacientUser.find({}, {
@@ -84,7 +77,6 @@ const getListPacients = async (req, res) => {
     }
 }
 
-// Preciso implementar auth para só acessar fazendo login com senha
 const getListPacientsNoAtend = async (req, res) => {
     try {
         const listPacients = await PacientUser.find({
@@ -95,7 +87,7 @@ const getListPacientsNoAtend = async (req, res) => {
             "estadocidade": 1,
             "disponibilidade": 1,
             "idade": 1,
-            "idgenero":1,
+            "idgenero": 1,
             "etnia":1
         })
         res.status(200).json({
@@ -110,7 +102,7 @@ const getListPacientsNoAtend = async (req, res) => {
 }
 
 
-// autenticação de rota falta - getTriageInfo
+// autenticação de rota para informações de acesso exclusivo do psicólogo - getTriageInfo
 const getTriageInfoId = (req, res) => {
     const token = auth(req, res);
     jwt.verify(token, SECRET, (err) => {

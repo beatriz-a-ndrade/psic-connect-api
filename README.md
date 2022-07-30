@@ -10,11 +10,18 @@
 
 <br>
 <br>
+<p align="center">
+
+### :blueheart: Aplicação disponível [aqui](https://psic-connet-api.herokuapp.com/)
+
+<br>
+<p>
+
 
 <!--ts-->
 
 - [💻 Sobre o Projeto](#-sobre-o-projeto)
-- [🚀 Descrição da API Psic.connect](#-descrição-da-api-psicconnect)
+- [🚀 Descrição API - Psic.connect](#-descrição-api---psicconnect)
 - [🔗 Apresentação do Projeto](#-apresentação-do-projeto)
 - [⚙️ Funcionalidades/Objetivos](#️-funcionalidadesobjetivos)
 - [📚 Aprendizados](#-aprendizados)
@@ -23,11 +30,22 @@
 - [💻 Instalação](#-instalação)
 - [📁 Arquitetura MVC](#-arquitetura-mvc)
 - [🔃 Rotas](#-rotas)
-- [🔃 Retorna a documentação no swagger:](#-retorna-a-documentação-no-swagger)
-- [🔃 Retorna teste com apresentação:](#-retorna-teste-com-apresentação)
-- [🔃 Manipulação das Rotas de Cadastro e Login dos usuários *Pacient* ou *Volunteer*](#-manipulação-das-rotas-de-cadastro-e-login-dos-usuários-pacient-ou-volunteer)
-- [🔃 Manipulação das Rotas para o login do usuário **Pacient** :](#-manipulação-das-rotas-para-o-login-do-usuário-pacient-)
-- [🔃 Manipulação das Rotas para o login do usuário **Volunteer** :](#-manipulação-das-rotas-para-o-login-do-usuário-volunteer-)
+  - [🔃 Retorna a documentação no swagger :](#-retorna-a-documentação-no-swagger-)
+  - [Swagger - Heroku :](#swagger---heroku-)
+  - [🔃 Retorna teste com apresentação:](#-retorna-teste-com-apresentação)
+  - [🔃 Manipulação das Rotas de Cadastro e Login dos usuários *Pacient* e *Volunteer*](#-manipulação-das-rotas-de-cadastro-e-login-dos-usuários-pacient-e-volunteer)
+  - [🔃 Manipulação das Rotas para o Login do usuário **Pacient** :](#-manipulação-das-rotas-para-o-login-do-usuário-pacient-)
+  - [🔃 Manipulação das Rotas para o login do usuário **Volunteer** :](#-manipulação-das-rotas-para-o-login-do-usuário-volunteer-)
+- [✅ Schema Pacients](#-schema-pacients)
+- [✅ API deve retornar seguinte JSON:](#-api-deve-retornar-seguinte-json)
+- [✅ SchemaVolunteer](#-schemavolunteer)
+- [✅ API deve retornar seguinte JSON:](#-api-deve-retornar-seguinte-json-1)
+- [✅  **[ POST ] :**  Login para geração de Token](#---post----login-para-geração-de-token)
+  - [Login Pacient](#login-pacient)
+  - [Login Volunteer](#login-volunteer)
+- [🚧 Implementações futuras (Em andamento)](#-implementações-futuras-em-andamento)
+- [🛠️ Contribua para o nosso projeto!](#️-contribua-para-o-nosso-projeto)
+- [👨‍💻 Autora](#-autora)
 
 
 <!--te-->
@@ -40,9 +58,9 @@
 
 <br>
 
- API desenvolvida como Projeto Final com o auxílio da professora Mayhhara Morais para a conclusão do curso de Backend  [{Reprograma}](https://reprograma.com.br/)
+ API desenvolvida como Projeto Final com o auxílio da professora [Mayhhara Morais](https://www.linkedin.com/in/mayhhara-morais-78040a200/) para a conclusão do curso de Backend 2022.1 | On16 [{Reprograma}](https://reprograma.com.br/)
 
-<p align="justify">Refletindo a psicologia como esse instrumento de transformação que observa fatores subjetivos, emocionais, históricos e das condições de vida dos sujeitos como determinantes dos quadros de saúde da população. E também em como foi exorbitante a explosão da demanda por saúde mental somatizada a um grande processo de empobrecimento da população brasileira, na atualidade. 
+<p align="justify">Refletindo a Psicologia como esse instrumento de transformação que observa fatores subjetivos, emocionais, históricos e das condições de vida dos sujeitos como determinantes dos quadros de saúde da população. E também em como foi exorbitante a explosão da demanda por saúde mental somatizada a um grande processo de empobrecimento da população brasileira, na atualidade. 
 
 <p align="justify"> Pensando então de que forma tornar mais acessível o atendimento psicológico para a comunidade, nasceu a ideia dessa API [ Psic.connect ] que tem como objetivo principal o de conectar pessoas em situação de vulnerabilidade sócio-econômica com psicólogos que se dispõem a atender voluntariamente essas pessoas, de forma solidária.
 
@@ -51,7 +69,7 @@
  
 <br><br>
 
-## 🚀 Descrição da API Psic.connect
+## 🚀 Descrição API - Psic.connect
 
 <br>
 
@@ -200,34 +218,35 @@ $ npm start
 
 ## 🔃 Rotas
 
-* local: http://localhost:8080
+* Local : http://localhost:8080
 
-* Heroku: https://xxxxxxx.herokuapp.com/
+* Heroku : https://psic-connet-api.herokuapp.com/
 
-    * Utilize o [Postman](https://www.postman.com/) ou [Insomnia](https://insomnia.rest/download/) para para chamar e testar os endpoints da API localmente ou via Heroku
+    * Utilize o [Postman](https://www.postman.com/) ou [Insomnia](https://insomnia.rest/download/) para chamar e testar os endpoints da API localmente ou via Heroku
 
 <br>
 
-## 🔃 Retorna a documentação no swagger: 
+### 🔃 Retorna a documentação no swagger : 
     
-Swagger - Heroku: 
+### Swagger - Heroku : 
 
 | Método HTTP  | Endpoint                            | Descrição                            |
 | ------------ | ----------------------------------- | ------------------------------------ |
-| GET          | `http://localhost:8080/rota-doc-psicconnect-api`    |  documentação  swagger               |        
+| GET          | `/rota-document`    |  documentação  swagger               |        
 
 <br>
 
-## 🔃 Retorna teste com apresentação: 
+### 🔃 Retorna teste com apresentação: 
 
 | Método HTTP  | Endpoint                     | Descrição                            |
 | ------------ | ---------------------------- | ------------------------------------ |
-| GET          | `http://localhost:8080/`     |  Mensagem de apresentação (Index)    |             |
+| GET          | `/`      |  Mensagem de apresentação ( Index )    |             |
 
 <br>
 
 
-## 🔃 Manipulação das Rotas de Cadastro e Login dos usuários *Pacient* ou *Volunteer*
+### 🔃 Manipulação das Rotas de Cadastro e Login dos usuários *Pacient* e *Volunteer*
+<br>
 
 | Método HTTP  | Endpoint                | Descrição                            |
 | ------------ | ----------------------- | ------------------------------------ |
@@ -238,7 +257,7 @@ Swagger - Heroku:
 
 <br>
 
-## 🔃 Manipulação das Rotas para o login do usuário **Pacient** :
+### 🔃 Manipulação das Rotas para o Login do usuário **Pacient** :
 
 | Método HTTP  | Endpoint                | Descrição                            |
 | ------------ | ----------------------- | ------------------------------------ |
@@ -251,7 +270,9 @@ Swagger - Heroku:
 <br>
 
 
-## 🔃 Manipulação das Rotas para o login do usuário **Volunteer** :
+### 🔃 Manipulação das Rotas para o login do usuário **Volunteer** :
+
+<br>
 
 | Método HTTP  | Endpoint                | Descrição                            |
 | ------------ | ----------------------- | ------------------------------------ |
@@ -264,7 +285,169 @@ Swagger - Heroku:
 <br>
 
 
+## ✅ Schema Pacients 
 
+- id: gerado automaticamente 
+- nome: String e obrigatório
+- email: String, obrigatório e único
+- disponibilidade: texto e obrigatório 
+- idade: número e obrigatório
+- estadocidade: String e obrigatório
+- idgenero: String e opcional 
+- etnia: String e opcional 
+- rendamedia: Number e obrigatório 
+- contato: Number, obrigatório e único
+- motivacao: String e obrigatório  
+- jaconseguiuatendimento: Boolean e obrigatório
+- tempoespera: Number e opcional
+- ocupacao: String e obrigatório
+- senha: String e obrigatório
+
+<br>
+
+## ✅ API deve retornar seguinte JSON:
+
+```jsx
+{
+    "nome": "Beatriz Ribeiro de Andrade",
+    "idade": 27,
+    "estadocidade": "Montanhas Doces, XX",
+    "idgenero": "ela",
+    "etnia": "branca",
+    "rendamedia": 300,
+    "email": "arrobateste@reprograma.com",
+    "contato": 9988776622,
+    "motivacao": "Vontade de chorar toda hora",
+    "jaconseguiuatendimento": false,
+    "tempoespera": 20,
+    "disponibilidade": "quinta-feiras à tarde",
+    "ocupacao": "artista plástica",
+    "senha": "$2b$10$b7Q0IoTqkYnp1TaiFSN3eOtrEeOHGUKsUINaPnwBOS7Eod1.X3YYK",
+    "_id": "62d9d75c0a63eee9f39fc12a",
+    "createdAt": "2022-07-21T22:46:52.819Z",
+    "updatedAt": "2022-07-21T22:46:52.819Z",
+    "__v": 0
+}
+```
+ 
+
+ <br>
+
+ ## ✅ SchemaVolunteer
+
+- id: gerado automaticamente 
+- nome: String e obrigatório
+- idade: Number e obrigatório
+- estadocidade: String e obrigatório
+- idgenero: String e opcional
+- etnia: String e opcional
+- crp: String, obrigatório e único
+- contato: Number, obrigatório e único
+- experienciaclinica: String e obrigatório
+- disponibilidade: String e obrigatório
+- disponivel: Boolean e obrigatório
+- senha: String e obrigatório 
+
+
+<br>
+
+## ✅ API deve retornar seguinte JSON:
+
+```jsx
+{
+ 
+    "nome": "Severino de Qualquer Um",
+    "idade": 34,
+    "estadocidade": "Montanhas Salgadas, ZZ",
+    "idgenero": "ele",
+    "etnia": "negro",
+    "CRP": 12384372,
+    "email": "arrobateste7@reprograma.com",
+    "contato": 9988776622,
+    "experienciaclinica": "2 anos de experiencia atuando em ongs e etc e tal",
+    "disponibilidade": "segundas e terças a tarde",
+    "disponivel": true,
+    "senha": "$2b$10$zAB9p/9FovzwdmWbLyN72udvCq6vjM3201nQxYgEBb04LSx3y.rwG",
+    "_id": "62d9db6c9b6fba79038bcd98",
+    "createdAt": "2022-07-21T23:04:12.265Z",
+    "updatedAt": "2022-07-21T23:04:12.265Z",
+    "__v": 0
+}
+    
+
+```
+
+<br>
+
+ <br>
+
+ ## ✅  **[ POST ] :**  Login para geração de Token
+### Login Pacient
+ ```jsx
+{
+    "email": "arrobateste@reprograma.com",
+    "senha": "abacaxiazedo123"
+}
+ ```
+
+### Login Volunteer
+ ```jsx
+{
+    "crp": "XXXX.XX-XX",
+    "senha": "abacaxidoce123"
+}
+ ```
+
+
+
+
+<br>
+
+
+## 🚧 Implementações futuras (Em andamento)
+
+<br>
+
+*  Implantação de código Front-end. Para o usuário ter a interação visual
+*  Funcionalidade de apenas permitir cadastro de psicólogos com CRP ativo (autenticação da validade do documento)
+* Acrescentar ao banco de dados, uma requisição que salva o Id de quem está logado, para ser uma plataforma mais segura
+* Implementar rotas GET para otimizar a dinâmica de buscas, e elementos como tags que categorizam e otimizam a experiência de busca da plataforma 
+<br>
+
+## 🛠️ Contribua para o nosso projeto!
+
+**1.** Forkar o projeto 
+
+**2.** Criar uma branch para realizar suas alterações: `git checkout -b feature/nome-da-nova-branch`
+
+**3.** Commitar as modificações feitas e abrir um pull request
+
+
+<br>
+
+
+</br>
+
+## 👨‍💻 Autora
+
+
+
+<br>
+
+
+
+<p align="center">
+<a>
+<td align="center"><a href="https://github.com/beatriz-a-ndrade">
+ <img style="border-radius: 25%;" src="public/imagens/PERFIL.jpg" width="120px;" alt="Foto de Perfil de Beatriz"/>
+ <br/>
+</a>
+</p>
+
+<p align="center"> Desenvolvido por <a href="https://www.linkedin.com/in/beatriz-ribeiro-de-andrade-351305218/" target="_blank"><img src="https://img.shields.io/badge/-Beatriz_Andrade-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/beatriz-ribeiro-de-andrade-351305218/" target="_blank"></a> </p>
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/84551213/171416454-ab93ab7f-e5a0-4276-81ec-4f5cb79dff31.png" alt="logo da reprograma" border="0" width = "200" /> <p align="center"></p>
 
 
 
